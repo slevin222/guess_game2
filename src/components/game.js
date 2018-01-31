@@ -6,6 +6,7 @@ class Game extends Component {
 
         this.state = {
             randomNumber: 0,
+            userNumber: ''
         }
     }
 
@@ -18,6 +19,7 @@ class Game extends Component {
 
         this.setState({
             randomNumber: randNum,
+            userNumber: ''
         });
     }
 
@@ -25,12 +27,34 @@ class Game extends Component {
         this.generateRandomNumber();
     }
 
+    makeGuess(event) {
+        event.preventDefault();
+        console.log('userGuess', this.state.userNumber);
+
+    }
+
     render() {
-        console.log('randomNum ', this.state);
+        const btnStyle = {
+            margin: '10px 5px'
+        };
+
+        const { randomNumber, userNumber } = this.state;
         return (
-            < div >
-                <p>Random Number: {this.state.randomNumber}</p>
-                <button onClick={this.resetGame.bind(this)} className="btn red darken-4">Reset</button>
+            < div className="center-align" >
+                <p className="center-align">Random Number: {randomNumber}</p>
+                <div className="row">
+                    <form className="col s6 offset-s3" onSubmit={this.makeGuess.bind(this)}>
+                        <div className="row">
+                            <div className="input-field">
+                                <input className="center-align" onChange={(event) => { this.setState({ userNumber: event.target.value }) }} value={userNumber} type="number" placeholder="Enter a Number" />
+                            </div>
+                        </div>
+                        <div className="row">
+                            <button style={btnStyle} className="btn pulse green">Guess</button>
+                            <button style={btnStyle} type="button" onClick={this.resetGame.bind(this)} className="btn red">Reset</button>
+                        </div>
+                    </form>
+                </div>
             </div >
         )
     }
