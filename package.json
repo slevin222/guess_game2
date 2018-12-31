@@ -16,7 +16,11 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "deep-extend": "^0.6.0",
+    "forwarded": "^0.1.2",
+    "fresh": "^0.5.2",
     "materialize-css": "^0.100.2",
+    "mime": "^2.4.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
