@@ -16,15 +16,18 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "debug": "^4.1.1",
     "deep-extend": "^0.6.0",
     "forwarded": "^0.1.2",
     "fresh": "^0.5.2",
+    "macaddress": "^0.2.9",
     "materialize-css": "^0.100.2",
     "mime": "^2.4.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "url-parse": "^1.4.4"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
